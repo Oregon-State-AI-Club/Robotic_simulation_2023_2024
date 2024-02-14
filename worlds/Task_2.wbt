@@ -1,0 +1,210 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/chairs/protos/WoodenChair.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.20772726013328488 0.22533575008632198 -0.9518787659836483 1.5056100071425422
+  position -0.32092059593195094 4.622512163098095 2.268610459392298
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0 -0.16
+  floorSize 2.1 7
+}
+WoodenChair {
+  translation -0.78 -0.43 -0.16
+  rotation 0 1 0 4.692820414042842e-06
+}
+WoodenChair {
+  translation 0.82 -0.43 -0.160005
+  rotation 2.346409999993541e-06 1.125079999996903e-14 0.9999999999972473 3.14159
+  name "wooden chair(2)"
+}
+WoodenChair {
+  translation -0.0299918 -0.76 1.05999
+  rotation 0.7071072811856002 0.7071062811852026 -1.6557706584274814e-06 -3.1415853071795863
+  name "wooden chair(4)"
+}
+WoodenChair {
+  translation -0.0299905 0.75 1.06999
+  rotation -0.7071062811814016 0.7071072811817993 3.673211460655597e-06 -3.1415853071795863
+  name "wooden chair(5)"
+}
+WoodenChair {
+  translation -0.78 0.4 -0.16
+  rotation 0 1 0 4.692820414042842e-06
+  name "wooden chair(1)"
+}
+WoodenChair {
+  translation 0.85 0.4 -0.16
+  rotation 2.346399999993541e-06 1.125069999996903e-14 0.9999999999972473 3.14159
+  name "wooden chair(3)"
+}
+Table {
+  translation 0 0 -0.16
+}
+Robot {
+  translation -0.414298 -2.71931 -0.150477
+  rotation 0.04861259471678933 0.7035159235419781 0.7090149229443474 3.04706
+  children [
+    Display {
+      translation 0 0.08 0
+    }
+    Solid {
+      translation 0 0.035 0.07
+      children [
+        Camera {
+          translation 0 0 0.03
+          rotation 0.5773509358560258 0.577349935856137 0.577349935856137 -2.094395307179586
+        }
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.02 0.02 0.05
+          }
+        }
+      ]
+      name "solid(4)"
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 663.1995777489508
+        anchor 0.05999999859394789 8.606224709772903e-06 0.04999999869043026
+      }
+      device [
+        RotationalMotor {
+          name "motor_1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05999999999999957 1.2998692507721943e-05 0.05000147013822052
+        rotation -0.7024459021189099 -0.11463191900895747 0.7024452133374353 2.913324621716874
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE Wheel
+        physics DEF Physics_wh Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 637.5987313708426
+        anchor -0.05999999937392844 6.956743753339101e-06 0.049999897664519954
+      }
+      device [
+        RotationalMotor {
+          name "motor_2"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05999999999999972 1.0489905835578549e-05 0.04999938090007085
+        rotation -0.7061803041155666 -0.05113812020848379 -0.706182887601214 3.2437792194410426
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE Wheel
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 637.598759226939
+        anchor -0.05999988563290504 -7.99438004961961e-05 -0.05000005917449002
+      }
+      device [
+        RotationalMotor {
+          name "motor_3"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05999988411462047 -7.533940131170594e-05 -0.050000731661971505
+        rotation -0.7061823149852285 -0.05112801999721837 -0.7061816080678309 3.243760196821472
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE Wheel
+        physics Physics {
+        }
+      }
+    }
+    DEF solid1 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 637.5987734792234
+        anchor 0.059999998601311735 3.8007432466014013e-06 -0.05000000073172495
+      }
+      device [
+        RotationalMotor {
+          name "motor_4"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05999999999999851 7.5617505958848096e-06 -0.050000548886338654
+        rotation -0.7061824999368294 0.05112309181301436 0.7061817799026311 3.243750004748989
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        boundingObject USE Wheel
+        physics DEF Physics_wh Physics {
+        }
+      }
+    }
+    DEF Body Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.05 0.2
+      }
+    }
+  ]
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "drive_my_robot"
+  window "generic_window"
+  remoteControl ""
+}

@@ -35,7 +35,7 @@ camFeed = vision(camera,timestep,width,height)
 #While the simulation is running
 while robot.step(timestep) != -1:
     camFeed.grabImage()
-    camFeed.contourImage()
+    #camFeed.contourImage()
     camFeed.displayImage()
     #Set all the motors to a constaint speed
     #Since all of the motors have the same orientation, this 

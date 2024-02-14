@@ -1,0 +1,236 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/chairs/protos/WoodenChair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/kitchen/fridge/protos/Fridge.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/kitchen/oven/protos/Oven.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/animals/protos/Cat.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/animals/protos/Dog.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/bedroom/protos/Bed.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.2763530901135263 0.4821924926502579 0.8313358945795835 1.2312091673813712
+  position -3.0257117822406583 -9.126728362767446 4.187233988673914
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 -0.22 -0.16
+  floorSize 7 7
+}
+CardboardBox {
+  translation 0.03 1.25 0.14
+}
+Pedestrian {
+  translation 1.92 1.19 1.08
+  rotation 0 0 1 -1.5707953071795862
+}
+Fridge {
+  translation -3.11 1.18 -0.15
+}
+Oven {
+  translation -3.19 -0.49 -0.16
+}
+CardboardBox {
+  translation -1.49 -2.02 0.14
+  name "cardboard box(1)"
+}
+WoodenChair {
+  translation -0.78 -0.43 -0.16
+  rotation 0 1 0 4.692820414042842e-06
+}
+WoodenChair {
+  translation 0.82 -0.43 -0.160005
+  rotation 2.346409999993541e-06 1.125079999996903e-14 0.9999999999972473 3.14159
+  name "wooden chair(2)"
+}
+WoodenChair {
+  translation -0.78 0.4 -0.16
+  rotation 0 1 0 4.692820414042842e-06
+  name "wooden chair(1)"
+}
+WoodenChair {
+  translation 0.85 0.4 -0.16
+  rotation 2.346399999993541e-06 1.125069999996903e-14 0.9999999999972473 3.14159
+  name "wooden chair(3)"
+}
+Table {
+  translation 0 0 -0.16
+}
+Robot {
+  translation 0.3013022811781231 -2.6805360407879704 -0.12096563915421464
+  rotation -0.08469948734652219 0.7053418946271307 0.7037888948591374 -3.0170853071795865
+  children [
+    Display {
+      translation 0 0.08 0
+    }
+    Solid {
+      translation 0 0.035 0.07
+      children [
+        Camera {
+          translation 0 0 0.03
+          rotation 0.5773509358560258 0.577349935856137 0.577349935856137 -2.094395307179586
+        }
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.02 0.02 0.05
+          }
+        }
+      ]
+      name "solid(4)"
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 664.0920996711483
+        anchor 0.05999999859394789 8.606224709772903e-06 0.04999999869043026
+      }
+      device [
+        RotationalMotor {
+          name "motor_1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05999999999999957 1.0216527465017082e-05 0.05000434217486006
+        rotation -0.6344393836529626 -0.4415586301306269 0.6344388423065007 2.3099677528034204
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE Wheel
+        physics DEF Physics_wh Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 638.4912531803625
+        anchor -0.05999999937392844 6.956743753339101e-06 0.049999897664519954
+      }
+      device [
+        RotationalMotor {
+          name "motor_2"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05999999999999972 9.576009730206823e-06 0.05000232454019408
+        rotation -0.681357984828297 0.26739317280590663 -0.6813605415985818 2.6190331447446513
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE Wheel
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 638.491280823117
+        anchor -0.05999988563290504 -7.99438004961961e-05 -0.05000005917449002
+      }
+      device [
+        RotationalMotor {
+          name "motor_3"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05999988411462047 -7.653113093942531e-05 -0.04999689588225578
+        rotation -0.6813577592705102 0.2674027822510335 -0.6813569959472608 2.619013449841552
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE Wheel
+        physics Physics {
+        }
+      }
+    }
+    DEF solid1 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 638.491294265258
+        anchor 0.059999998601311735 3.8007432466014013e-06 -0.05000000073172495
+      }
+      device [
+        RotationalMotor {
+          name "motor_4"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05999999999999851 6.58741562949544e-06 -0.04999741614146878
+        rotation -0.6813567834708135 -0.2674075801890874 0.6813560887492853 2.619004168058234
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        boundingObject USE Wheel
+        physics DEF Physics_wh Physics {
+        }
+      }
+    }
+    DEF Body Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.05 0.2
+      }
+    }
+  ]
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "drive_my_robot"
+  window "generic_window"
+  remoteControl ""
+}
+Cat {
+  translation 0 -1.55 -0.17
+  rotation 0 0 1 0.523599
+}
+Dog {
+  translation 2.27559 1.16703e-06 0.394098
+  rotation -0.9872271019331921 0 -0.15931933093190778 -3.1415853071795863
+}
+Bed {
+  translation 2.03 -1.79 -0.16
+  rotation 0 0 1 3.14159
+}

@@ -22,7 +22,7 @@ class vision:
         imgray = cv2.cvtColor(self.image,cv2.COLOR_BGR2GRAY)
         ret,thresh = cv2.threshold(imgray,127,255,0)
         contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-        cv2.drawContours(imgray, contours, -1, (0,255,0), 3)
+        cv2.drawContours(imgray, contours, -1, (0,255,0), 2)
         self.image = imgray
         
         
