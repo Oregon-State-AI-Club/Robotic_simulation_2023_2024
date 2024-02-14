@@ -23,3 +23,6 @@ Linus still has you caged in, but has guests coming over! Chairs now hang off th
 Linus's dog, Tux, knocked over one of the chairs and is now blocking a large portion of one side of the table! Oh, he also blamed it on you.
 ## Task_4
 In the aftermath of the destruction, Linus has opted to pack away the extra chairs just in case you try anything funny. These big boxes now totally block 2 seperate paths.
+
+While not a competition, there is definitely pride in solving a complex problem the most elegantly. Feel free to record your simulation through webots, and post it to the designated channel in discord!
+
