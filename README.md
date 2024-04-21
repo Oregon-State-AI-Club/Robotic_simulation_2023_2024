@@ -16,3 +16,9 @@ Double clicking that world, assuming you have webots installed, should launch th
 
 # Resources:
 Simulation software: https://cyberbotics.com/ 
+
+# Dataset download:
+https://www.cvlibs.net/datasets/kitti/eval_depth_all.php 
+Make sure to download the "annotated depth maps data set (14 GB)" version. Once the download is complete, unzip the folder into:
+Robotic_simulation_2023_2024\controllers\drive_my_robot\model
+And rename the file to "data".
