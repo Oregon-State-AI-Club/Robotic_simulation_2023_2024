@@ -8,8 +8,8 @@ from pathlib import Path
 import cv2
 
 
-BATCH_SIZE = 8 #No specific reason for this, medium recommended it lmao
-SIZE = 480,140
+BATCH_SIZE = 5 #No specific reason for this, medium recommended it lmao
+SIZE = 608,176
 
 
 def depth_read(filename):
@@ -34,8 +34,8 @@ class DepthDataset(Dataset):
         depthPath = ""
         imagePath = ""
         if(split == "test"):
-            depthPath = str(path.parent.absolute()) + "\\data\\depth_selection\\val_selection_cropped\\groundtruth_depth\\"
-            imagePath = str(path.parent.absolute()) + "data\\depth_selection\\val_selection_cropped\\image\\"
+            depthPath = str(path.parent.absolute()) + "\\data\\depth_selection\\val_selection_cropped\\velodyne_raw\\"
+            imagePath = str(path.parent.absolute()) + "\\data\\depth_selection\\val_selection_cropped\\image\\"
         elif(split == "train"):
             depthPath = str(path.parent.absolute()) + "\\data\\depth_selection\\test_depth_completion_anonymous\\velodyne_raw\\"
             imagePath = str(path.parent.absolute()) + "\\data\\depth_selection\\test_depth_completion_anonymous\\image\\"
