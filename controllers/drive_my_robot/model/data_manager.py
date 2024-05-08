@@ -8,8 +8,9 @@ from pathlib import Path
 import cv2
 
 
-BATCH_SIZE = 5 #No specific reason for this, medium recommended it lmao
-SIZE = 608,176
+BATCH_SIZE = 8 #No specific reason for this, medium recommended it lmao
+#SIZE = 608,176
+SIZE = 480,140
 
 
 def depth_read(filename):

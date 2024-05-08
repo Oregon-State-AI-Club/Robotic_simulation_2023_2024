@@ -14,8 +14,8 @@ torch.cuda.empty_cache()
 LR = 1e-5
 EPOCHS = 10
 
-IMG_HEIGHT = 352
-IMG_WIDTH = 1216
+ORIGINAL_IMG_HEIGHT = 352
+ORIGINAL_IMG_WIDTH = 1216
 
 
 
